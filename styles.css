@@ -98,6 +98,28 @@ section {
   }
 }
 
+.gif-container {
+  /* white-space: nowrap; */
+}
+
+.animated-gif {
+  position: relative;
+  animation: moveLeftToRight 15s infinite linear;
+  height: 150px;
+  width: 150px;
+}
+
+/* Keyframes to move the GIF from left to right */
+@keyframes moveLeftToRight {
+  0% {
+    /* left: -100%; Start from outside the left side of the screen */
+    transform: translateX(-150px);
+  }
+  100% {
+    /* left: 100%; Move to outside the right side of the screen */
+    transform: translateX(100vw);
+  }
+}
 /* .parallax-wrapper {
   width: 100%;
   perspective: 1px;
