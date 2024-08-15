@@ -1,0 +1,143 @@
+html {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 74px;
+  /* width: 100%; */
+  height: calc(100% - 74px);
+  background: white;
+}
+
+h1,
+h2,
+h3,
+a,
+p {
+  font-family: "Fustat", Helvetica, sans-serif;
+}
+
+.wrapper {
+  max-width: 1920px;
+  background-color: white;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 1920px;
+}
+
+nav {
+  padding: 1rem;
+  padding-inline: 2rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.logo {
+  width: 5rem;
+}
+
+section {
+  height: calc(100vh - 74px);
+}
+
+#bilder {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.picture-slide-wrapper:hover .picture-slide {
+  animation-play-state: paused;
+}
+
+.picture-slide {
+  display: inline-block;
+  animation: 25s picture-slide infinite linear;
+}
+
+.picture-slide img {
+  height: 500px;
+  width: 500px;
+  object-fit: cover;
+  margin-inline: 1rem;
+}
+
+@keyframes picture-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* .parallax-wrapper {
+  width: 100%;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-x: hidden;
+}
+
+.section1,
+.section2 {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.section1::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("assets/synth_parallax_wallpaper_main.png") top center;
+  background-size: cover;
+  transform: translateZ(-1px) scale(2.2);
+}
+
+.section1::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("assets/synth_parallax_wallpaper_bottom.png") top center;
+  background-size: cover;
+}
+
+.section1 .text {
+  top: 20%;
+  transform: translateZ(-0.5px) scale(1.5, 1.6) translate(-33%, 10%);
+}
+
+.section2 {
+  background: #435;
+}
+
+.text {
+  top: 30%;
+  left: 50%;
+  position: absolute;
+  font-family: "Franklin Gothic Heavy";
+  font-size: 15vw;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3),
+    5px 5px 70px rgba(255, 255, 255, 0.5);
+  transform: scale(1, 1.1) translate(-50%, 10%);
+} */
