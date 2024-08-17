@@ -98,6 +98,29 @@ section {
   }
 }
 
+/* VIDEOS */
+#video {
+  width: 100%;
+}
+
+video {
+  margin-right: 10px;
+}
+
+.video-cards-container {
+  display: flex;
+  margin: 0 auto;
+}
+
+.video-card {
+  display: flex;
+  width: 720px;
+}
+
+.video-info {
+  flex: 1;
+}
+
 .gif-container {
   /* white-space: nowrap; */
 }

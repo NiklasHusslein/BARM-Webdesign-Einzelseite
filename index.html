@@ -50,31 +50,69 @@
 
         <section id="video">
           <h1>Video</h1>
+
+          <div class="video-cards-container">
+            <div class="video-card">
+              <video width="360" height="640" controls>
+                <source
+                  src="assets/videos/paul_kalkbrenner.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+              <div class="video-info">
+                <h2>Paul Kalkbrenner -<br />Gebrünn Gebrünn</h2>
+                <iframe
+                  style="border-radius: 12px"
+                  src="https://open.spotify.com/embed/track/47X4O5S1uOHv7crhB7XeEY?utm_source=generator&theme=0"
+                  width="100%"
+                  height="152"
+                  frameborder="0"
+                  allowfullscreen=""
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+            <video width="360" height="640" controls>
+              <source src="assets/videos/ben_boehmer.mp4" type="video/ogg" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </section>
         <section id="audio">
           <h1>Audio</h1>
 
           <div class="audio-container">
             <div class="audio-control">
+              <audio controls loop src="assets/audio/thriller_kick.wav"></audio>
+            </div>
+            <div class="audio-control">
               <audio
                 controls
-                src="assets/audio/Paul Hauck - Sungroove.mp3"
+                loop
+                src="assets/audio/thriller_snare_clap.wav"
               ></audio>
-              <label>
-                <input type="checkbox" class="mute-checkbox" /> Mute/Unmute
-              </label>
             </div>
             <div class="audio-control">
-              <audio controls src=""></audio>
-              <label>
-                <input type="checkbox" class="mute-checkbox" /> Mute/Unmute
-              </label>
+              <audio
+                controls
+                loop
+                src="assets/audio/thriller_hihats.wav"
+              ></audio>
             </div>
             <div class="audio-control">
-              <audio controls src=""></audio>
-              <label>
-                <input type="checkbox" class="mute-checkbox" /> Mute/Unmute
-              </label>
+              <audio
+                controls
+                loop
+                src="assets/audio/thriller_percussion.wav"
+              ></audio>
+            </div>
+            <div class="audio-control">
+              <audio controls loop src="assets/audio/thriller_bass.wav"></audio>
+            </div>
+            <div class="audio-control">
+              <audio controls loop src="assets/audio/thriller_pads.wav"></audio>
             </div>
           </div>
 
