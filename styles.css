@@ -67,6 +67,62 @@ section {
   height: calc(100vh - 74px);
 }
 
+#home {
+  position: relative;
+}
+
+#home-studio {
+  position: absolute;
+  height: 720px;
+  width: 1280px;
+  background-image: url(assets/pictures/studio.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#home-studio p {
+  margin: 2rem 0 0 2rem;
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(10, 101, 10);
+}
+
+#home-moderat-2 {
+  position: absolute;
+  height: 450px;
+  width: 450px;
+  background-image: url(assets/pictures/moderat_2_lp.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: 400px;
+  bottom: 20px;
+}
+
+#home-moderat-2 p {
+  margin: 2rem 0 0 2rem;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffd401;
+}
+
+#home-paul-kalkbrenner-parts-of-life {
+  position: absolute;
+  height: 450px;
+  width: 450px;
+  background-image: url(assets/pictures/paul_kalkbrenner_parts_of_life_lp.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: 0;
+  bottom: 300px;
+}
+
+#home-paul-kalkbrenner-parts-of-life p {
+  margin: 2rem 0 0 2rem;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #e12c41;
+}
+
 #bilder {
   overflow: hidden;
   white-space: nowrap;
@@ -103,22 +159,52 @@ section {
   width: 100%;
 }
 
-video {
-  margin-right: 10px;
-}
-
 .video-cards-container {
   display: flex;
-  margin: 0 auto;
+  justify-content: space-evenly;
 }
 
 .video-card {
   display: flex;
   width: 720px;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.video-card:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+}
+
+.video-container {
+  width: 360px;
+  height: 640px;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.video-link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.video-link:hover {
+  text-decoration: underline;
 }
 
 .video-info {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .gif-container {

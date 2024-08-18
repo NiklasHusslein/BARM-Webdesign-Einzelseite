@@ -16,7 +16,11 @@
     <div class="wrapper">
       <header>
         <nav>
-          <img class="logo" src="assets/ableton_logo_nh.svg" alt="logo" />
+          <img
+            class="logo"
+            src="assets/pictures/ableton_logo_nh.svg"
+            alt="logo"
+          />
           <a href="#home">Home</a>
           <a href="#bilder">Bilder</a>
           <a href="#video">Video</a>
@@ -25,25 +29,36 @@
       </header>
 
       <main>
-        <section id="home"><h1>Home</h1></section>
+        <section id="home">
+          <h1>Home</h1>
+          <div id="home-studio">
+            <p>Das ist leider nicht mein Studio</p>
+          </div>
+          <div id="home-paul-kalkbrenner-parts-of-life">
+            <p>Paul Kalkbrenner - Parts of Life</p>
+          </div>
+          <div id="home-moderat-2">
+            <p>Moderat - II</p>
+          </div>
+        </section>
 
         <section id="bilder">
           <h1 id="bilder-h1">Bilder</h1>
 
           <div class="picture-slide-wrapper">
             <div class="picture-slide">
-              <img src="assets/thomann1.jpg" alt="" />
-              <img src="assets/thomann2.jpg" alt="" />
-              <img src="assets/thomann3.jpg" alt="" />
-              <img src="assets/thomann4.jpg" alt="" />
-              <img src="assets/thomann5.jpg" alt="" />
+              <img src="assets/pictures/thomann1.jpg" alt="" />
+              <img src="assets/pictures/thomann2.jpg" alt="" />
+              <img src="assets/pictures/thomann3.jpg" alt="" />
+              <img src="assets/pictures/thomann4.jpg" alt="" />
+              <img src="assets/pictures/thomann5.jpg" alt="" />
             </div>
             <div class="picture-slide">
-              <img src="assets/thomann1.jpg" alt="" />
-              <img src="assets/thomann2.jpg" alt="" />
-              <img src="assets/thomann3.jpg" alt="" />
-              <img src="assets/thomann4.jpg" alt="" />
-              <img src="assets/thomann5.jpg" alt="" />
+              <img src="assets/pictures/thomann1.jpg" alt="" />
+              <img src="assets/pictures/thomann2.jpg" alt="" />
+              <img src="assets/pictures/thomann3.jpg" alt="" />
+              <img src="assets/pictures/thomann4.jpg" alt="" />
+              <img src="assets/pictures/thomann5.jpg" alt="" />
             </div>
           </div>
         </section>
@@ -53,20 +68,26 @@
 
           <div class="video-cards-container">
             <div class="video-card">
-              <video width="360" height="640" controls>
-                <source
-                  src="assets/videos/paul_kalkbrenner.mp4"
-                  type="video/mp4"
-                />
-                Your browser does not support the video tag.
-              </video>
+              <div class="video-container">
+                <video width="360" height="640" controls>
+                  <source
+                    src="assets/videos/paul_kalkbrenner.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
               <div class="video-info">
-                <h2>Paul Kalkbrenner -<br />Gebrünn Gebrünn</h2>
+                <a
+                  class="video-link"
+                  href="https://www.youtube.com/watch?v=tlkhvHa9zz8"
+                  ><h2>Paul Kalkbrenner -<br />Gebrünn Gebrünn</h2></a
+                >
                 <iframe
                   style="border-radius: 12px"
                   src="https://open.spotify.com/embed/track/47X4O5S1uOHv7crhB7XeEY?utm_source=generator&theme=0"
                   width="100%"
-                  height="152"
+                  height="352"
                   frameborder="0"
                   allowfullscreen=""
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -74,10 +95,30 @@
                 ></iframe>
               </div>
             </div>
-            <video width="360" height="640" controls>
-              <source src="assets/videos/ben_boehmer.mp4" type="video/ogg" />
-              Your browser does not support the video tag.
-            </video>
+            <div class="video-card">
+              <div class="video-container">
+                <video width="360" height="640" controls>
+                  <source
+                    src="assets/videos/ben_boehmer.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-info">
+                <h2>Ben Böhmer -<br />Wall of Strings</h2>
+                <iframe
+                  style="border-radius: 12px"
+                  src="https://open.spotify.com/embed/track/1YH044L7flGyNT7lUT1KV5?utm_source=generator&theme=0"
+                  width="100%"
+                  height="352"
+                  frameborder="0"
+                  allowfullscreen=""
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
           </div>
         </section>
         <section id="audio">
@@ -85,34 +126,34 @@
 
           <div class="audio-container">
             <div class="audio-control">
-              <audio controls loop src="assets/audio/thriller_kick.wav"></audio>
+              <audio controls loop src="assets/audio/thriller_kick.mp3"></audio>
             </div>
             <div class="audio-control">
               <audio
                 controls
                 loop
-                src="assets/audio/thriller_snare_clap.wav"
+                src="assets/audio/thriller_snare_clap.mp3"
               ></audio>
             </div>
             <div class="audio-control">
               <audio
                 controls
                 loop
-                src="assets/audio/thriller_hihats.wav"
+                src="assets/audio/thriller_hihats.mp3"
               ></audio>
             </div>
             <div class="audio-control">
               <audio
                 controls
                 loop
-                src="assets/audio/thriller_percussion.wav"
+                src="assets/audio/thriller_percussion.mp3"
               ></audio>
             </div>
             <div class="audio-control">
-              <audio controls loop src="assets/audio/thriller_bass.wav"></audio>
+              <audio controls loop src="assets/audio/thriller_bass.mp3"></audio>
             </div>
             <div class="audio-control">
-              <audio controls loop src="assets/audio/thriller_pads.wav"></audio>
+              <audio controls loop src="assets/audio/thriller_pads.mp3"></audio>
             </div>
           </div>
 
@@ -121,7 +162,7 @@
           <div class="gif-container">
             <img
               class="animated-gif"
-              src="assets/moonwalk.gif"
+              src="assets/pictures/moonwalk.gif"
               alt="Moonwalk GIF"
               height="150"
               width="150"
