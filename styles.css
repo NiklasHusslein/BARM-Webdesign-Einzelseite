@@ -16,13 +16,14 @@ h1,
 h2,
 h3,
 a,
-p {
+p,
+button {
   font-family: "Fustat", Helvetica, sans-serif;
 }
 
 h1 {
   font-size: 3rem;
-  margin-left: 5rem;
+  /* margin-left: 5rem; */
   margin-top: 0;
 }
 
@@ -207,25 +208,153 @@ a:visited {
   justify-content: space-between;
 }
 
+/* AUDIO */
+.audio-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5rem;
+}
+
+#download-link {
+  text-decoration: none;
+  color: #0000ff;
+  font-size: 1.5rem;
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.audio-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#play-stop-button {
+  background-color: white;
+  border: none;
+  border-radius: 3rem;
+  height: 100px;
+  width: 200px;
+  font-size: 2rem;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+#play-stop-button:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+}
+
+.audio-cards-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.drums-card {
+  display: flex;
+  /* align-items: center; */
+  height: 300px;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+#linndrum {
+  background-image: url(assets/pictures/linndrum.png);
+  height: 250px;
+  width: 250px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  align-self: center;
+}
+
+.drums-card:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+}
+
+.audio-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.melodic-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* gap: 2rem; */
+}
+
+.bass-card {
+  display: flex;
+  align-items: center;
+  height: 125px;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+#minimoog {
+  background-image: url(assets/pictures/minimoog.png);
+  height: 125px;
+  width: 250px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.bass-card:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+}
+
+.pads-card {
+  display: flex;
+  align-items: center;
+  height: 125px;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+#jupiter-8 {
+  background-image: url(assets/pictures/jupiter_8.png);
+  height: 125px;
+  width: 250px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.pads-card:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+}
+
 .gif-container {
-  /* white-space: nowrap; */
+  overflow: hidden;
 }
 
 .animated-gif {
-  position: relative;
-  animation: moveLeftToRight 15s infinite linear;
+  animation: moveLeftToRight 20s infinite linear;
   height: 150px;
   width: 150px;
 }
 
-/* Keyframes to move the GIF from left to right */
 @keyframes moveLeftToRight {
   0% {
-    /* left: -100%; Start from outside the left side of the screen */
     transform: translateX(-150px);
   }
   100% {
-    /* left: 100%; Move to outside the right side of the screen */
     transform: translateX(100vw);
   }
 }

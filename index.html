@@ -30,7 +30,7 @@
 
       <main>
         <section id="home">
-          <h1>Home</h1>
+          <!-- <h1>Home</h1> -->
           <div id="home-studio">
             <p>Das ist leider nicht mein Studio</p>
           </div>
@@ -122,42 +122,64 @@
           </div>
         </section>
         <section id="audio">
-          <h1>Audio</h1>
-
-          <div class="audio-container">
-            <div class="audio-control">
-              <audio controls loop src="assets/audio/thriller_kick.mp3"></audio>
-            </div>
-            <div class="audio-control">
-              <audio
-                controls
-                loop
-                src="assets/audio/thriller_snare_clap.mp3"
-              ></audio>
-            </div>
-            <div class="audio-control">
-              <audio
-                controls
-                loop
-                src="assets/audio/thriller_hihats.mp3"
-              ></audio>
-            </div>
-            <div class="audio-control">
-              <audio
-                controls
-                loop
-                src="assets/audio/thriller_percussion.mp3"
-              ></audio>
-            </div>
-            <div class="audio-control">
-              <audio controls loop src="assets/audio/thriller_bass.mp3"></audio>
-            </div>
-            <div class="audio-control">
-              <audio controls loop src="assets/audio/thriller_pads.mp3"></audio>
-            </div>
+          <div class="audio-header">
+            <h1>Thriller: Deconstructed</h1>
+            <a
+              id="download-link"
+              href="assets/pdf/How_To_Michael_Jackson_Thriller.pdf"
+              download
+              >MIDI-Anleitung</a
+            >
           </div>
 
-          <button id="play-stop-button">Play</button>
+          <div class="audio-container">
+            <button id="play-stop-button">Play</button>
+            <div class="audio-cards-container">
+              <div class="drums-card">
+                <div id="linndrum"></div>
+                <div class="audio-controls">
+                  <audio
+                    controls
+                    loop
+                    src="assets/audio/thriller_kick.mp3"
+                  ></audio>
+                  <audio
+                    controls
+                    loop
+                    src="assets/audio/thriller_snare_clap.mp3"
+                  ></audio>
+                  <audio
+                    controls
+                    loop
+                    src="assets/audio/thriller_hihats.mp3"
+                  ></audio>
+                  <audio
+                    controls
+                    loop
+                    src="assets/audio/thriller_percussion.mp3"
+                  ></audio>
+                </div>
+              </div>
+              <div class="melodic-cards">
+                <div class="bass-card">
+                  <div id="minimoog"></div>
+                  <audio
+                    controls
+                    loop
+                    src="assets/audio/thriller_bass.mp3"
+                  ></audio>
+                </div>
+                <div class="pads-card">
+                  <div id="jupiter-8"></div>
+                  <audio
+                    controls
+                    loop
+                    src="assets/audio/thriller_pads.mp3"
+                  ></audio>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div class="gif-container">
             <img
