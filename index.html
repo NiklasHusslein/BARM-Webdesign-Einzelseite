@@ -1,8 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Niklas</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Niklas Hußlein Einzelseite" />
+    <meta name="keywords" content="XHTML, CSS" />
+    <meta name="author" content="Niklas Hußlein" />
+    <meta name="robots" content="no-index" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/pictures/favicon-16x16.png"
+    />
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -10,7 +21,6 @@
       href="https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&display=swap"
       rel="stylesheet"
     />
-    <title>Niklas</title>
   </head>
   <body>
     <div class="wrapper">
@@ -20,30 +30,30 @@
             class="logo"
             src="assets/pictures/ableton_logo_nh.svg"
             alt="logo"
+            width="80"
+            height="42"
           />
-          <a href="#home">Home</a>
-          <a href="#bilder">Bilder</a>
-          <a href="#video">Video</a>
-          <a href="#audio">Audio</a>
+          <ul>
+            <li><a href="#home-section">Home</a></li>
+            <li><a href="#bilder-section">Bilder</a></li>
+            <li><a href="#video-section">Video</a></li>
+            <li><a href="#audio-section">Audio</a></li>
+            <li><a href="#canvas-section">Canvas</a></li>
+          </ul>
         </nav>
       </header>
 
       <main>
-        <section id="home">
-          <!-- <h1>Home</h1> -->
+        <div id="home-section" class="page-section">
           <div id="home-studio">
             <p>Das ist leider nicht mein Studio</p>
           </div>
-          <div id="home-paul-kalkbrenner-parts-of-life">
-            <p>Paul Kalkbrenner - Parts of Life</p>
-          </div>
-          <div id="home-moderat-2">
-            <p>Moderat - II</p>
-          </div>
-        </section>
+          <div id="home-paul-kalkbrenner-parts-of-life"></div>
+          <div id="home-moderat-2"></div>
+        </div>
 
-        <section id="bilder">
-          <h1 id="bilder-h1">Bilder</h1>
+        <div id="bilder-section" class="page-section">
+          <h1 class="heading-1">Urlaubsziel: Thomann</h1>
 
           <div class="picture-slide-wrapper">
             <div class="picture-slide">
@@ -61,34 +71,60 @@
               <img src="assets/pictures/thomann5.jpg" alt="" />
             </div>
           </div>
-        </section>
+        </div>
 
-        <section id="video">
-          <h1>Video</h1>
+        <div id="video-section" class="page-section">
+          <h1 class="heading-1">Konzerte</h1>
 
           <div class="video-cards-container">
             <div class="video-card">
               <div class="video-container">
-                <video width="360" height="640" controls>
+                <video
+                  width="360"
+                  height="640"
+                  controls
+                  poster="assets/pictures/paul_kalkbrenner (1).jpg"
+                >
                   <source
-                    src="assets/videos/paul_kalkbrenner.mp4"
+                    src="assets/videos/paul_kalkbrenner.mov"
                     type="video/mp4"
+                  />
+                  <source
+                    src="assets/videos/paul_kalkbrenner.ogv"
+                    type="video/ogg"
+                  />
+                  <source
+                    src="assets/videos/paul_kalkbrenner.webm"
+                    type="video/webm"
                   />
                   Your browser does not support the video tag.
                 </video>
               </div>
-              <div class="video-info">
-                <a
-                  class="video-link"
-                  href="https://www.youtube.com/watch?v=tlkhvHa9zz8"
-                  ><h2>Paul Kalkbrenner -<br />Gebrünn Gebrünn</h2></a
-                >
+              <div class="video-side-container">
+                <div class="video-info">
+                  <h2>Paul Kalkbrenner</h2>
+                  <div class="video-info-line">
+                    <img
+                      src="assets/pictures/music_note_icon.png"
+                      alt="Music Note Icon"
+                      height="32"
+                      width="32"
+                    />
+                    <p>Gebrünn Gebrünn</p>
+                  </div>
+                  <div class="video-info-line">
+                    <img
+                      src="assets/pictures/location_icon.png"
+                      alt="Location Marker Icon"
+                      height="32"
+                      width="32"
+                    />
+                    <p>Esch-sur-Alzette, Luxmeburg</p>
+                  </div>
+                </div>
                 <iframe
-                  style="border-radius: 12px"
+                  class="spotify-link"
                   src="https://open.spotify.com/embed/track/47X4O5S1uOHv7crhB7XeEY?utm_source=generator&theme=0"
-                  width="100%"
-                  height="352"
-                  frameborder="0"
                   allowfullscreen=""
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                   loading="lazy"
@@ -97,22 +133,53 @@
             </div>
             <div class="video-card">
               <div class="video-container">
-                <video width="360" height="640" controls>
+                <video
+                  width="360"
+                  height="640"
+                  controls
+                  poster="assets/pictures/ben_boehmer (1).jpg"
+                >
+                  <!-- sources: mov/type = mp4 , ogv/type ogg, webm-->
                   <source
-                    src="assets/videos/ben_boehmer.mp4"
+                    src="assets/videos/ben_boehmer.mov"
                     type="video/mp4"
+                  />
+                  <source
+                    src="assets/videos/ben_boehmer.ogv"
+                    type="video/ogg"
+                  />
+                  <source
+                    src="assets/videos/ben_boehmer.webm"
+                    type="video/webm"
                   />
                   Your browser does not support the video tag.
                 </video>
               </div>
-              <div class="video-info">
-                <h2>Ben Böhmer -<br />Wall of Strings</h2>
+              <div class="video-side-container">
+                <div class="video-info">
+                  <h2>Ben Böhmer</h2>
+                  <div class="video-info-line">
+                    <img
+                      src="assets/pictures/music_note_icon.png"
+                      alt="Music Note Icon"
+                      height="32"
+                      width="32"
+                    />
+                    <p>Wall of Strings</p>
+                  </div>
+                  <div class="video-info-line">
+                    <img
+                      src="assets/pictures/location_icon.png"
+                      alt="Location Marker Icon"
+                      height="32"
+                      width="32"
+                    />
+                    <p>Saalburg-Ebersdorf, Deutschland</p>
+                  </div>
+                </div>
                 <iframe
-                  style="border-radius: 12px"
+                  class="spotify-link"
                   src="https://open.spotify.com/embed/track/1YH044L7flGyNT7lUT1KV5?utm_source=generator&theme=0"
-                  width="100%"
-                  height="352"
-                  frameborder="0"
                   allowfullscreen=""
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                   loading="lazy"
@@ -120,10 +187,11 @@
               </div>
             </div>
           </div>
-        </section>
-        <section id="audio">
+        </div>
+
+        <div id="audio-section" class="page-section">
           <div class="audio-header">
-            <h1>Thriller: Deconstructed</h1>
+            <h1>Thriller - Deconstructed</h1>
             <a
               id="download-link"
               href="assets/pdf/How_To_Michael_Jackson_Thriller.pdf"
@@ -136,46 +204,124 @@
             <button id="play-stop-button">Play</button>
             <div class="audio-cards-container">
               <div class="drums-card">
-                <div id="linndrum"></div>
+                <img
+                  id="linndrum"
+                  src="assets/pictures/linndrum.png"
+                  alt="Linndrum"
+                  height="250"
+                  width="250"
+                />
                 <div class="audio-controls">
-                  <audio
-                    controls
-                    loop
-                    src="assets/audio/thriller_kick.mp3"
-                  ></audio>
-                  <audio
-                    controls
-                    loop
-                    src="assets/audio/thriller_snare_clap.mp3"
-                  ></audio>
-                  <audio
-                    controls
-                    loop
-                    src="assets/audio/thriller_hihats.mp3"
-                  ></audio>
-                  <audio
-                    controls
-                    loop
-                    src="assets/audio/thriller_percussion.mp3"
-                  ></audio>
+                  <audio controls loop>
+                    <source
+                      src="assets/audio/thriller_kick.mp3"
+                      type="audio/mp3"
+                    />
+                    <source
+                      src="assets/audio/thriller_kick.ogg"
+                      type="audio/ogg"
+                    />
+                    <source
+                      src="assets/audio/thriller_kick.wav"
+                      type="audio/wav"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                  <audio controls loop>
+                    <source
+                      src="assets/audio/thriller_snare_clap.mp3"
+                      type="audio/mp3"
+                    />
+                    <source
+                      src="assets/audio/thriller_snare_clap.ogg"
+                      type="audio/ogg"
+                    />
+                    <source
+                      src="assets/audio/thriller_snare_clap.wav"
+                      type="audio/wav"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                  <audio controls loop>
+                    <source
+                      src="assets/audio/thriller_hihats.mp3"
+                      type="audio/mp3"
+                    />
+                    <source
+                      src="assets/audio/thriller_hihats.ogg"
+                      type="audio/ogg"
+                    />
+                    <source
+                      src="assets/audio/thriller_hihats.wav"
+                      type="audio/wav"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                  <audio controls loop>
+                    <source
+                      src="assets/audio/thriller_percussion.mp3"
+                      type="audio/mp3"
+                    />
+                    <source
+                      src="assets/audio/thriller_percussion.ogg"
+                      type="audio/ogg"
+                    />
+                    <source
+                      src="assets/audio/thriller_percussion.wav"
+                      type="audio/wav"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
                 </div>
               </div>
               <div class="melodic-cards">
                 <div class="bass-card">
-                  <div id="minimoog"></div>
-                  <audio
-                    controls
-                    loop
-                    src="assets/audio/thriller_bass.mp3"
-                  ></audio>
+                  <img
+                    id="minimoog"
+                    src="assets/pictures/minimoog.png"
+                    alt="Minimooog"
+                    height="125"
+                    width="250"
+                  />
+                  <audio controls loop>
+                    <source
+                      src="assets/audio/thriller_bass.mp3"
+                      type="audio/mp3"
+                    />
+                    <source
+                      src="assets/audio/thriller_bass.ogg"
+                      type="audio/ogg"
+                    />
+                    <source
+                      src="assets/audio/thriller_bass.wav"
+                      type="audio/wav"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
                 </div>
                 <div class="pads-card">
-                  <div id="jupiter-8"></div>
-                  <audio
-                    controls
-                    loop
-                    src="assets/audio/thriller_pads.mp3"
-                  ></audio>
+                  <img
+                    id="jupiter-8"
+                    src="assets/pictures/jupiter_8.png"
+                    alt="Jupiter-8"
+                    height="125"
+                    width="250"
+                  />
+                  <audio controls loop>
+                    <source
+                      src="assets/audio/thriller_pads.mp3"
+                      type="audio/mp3"
+                    />
+                    <source
+                      src="assets/audio/thriller_pads.ogg"
+                      type="audio/ogg"
+                    />
+                    <source
+                      src="assets/audio/thriller_pads.wav"
+                      type="audio/wav"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
                 </div>
               </div>
             </div>
@@ -190,16 +336,17 @@
               width="150"
             />
           </div>
-        </section>
+        </div>
+
+        <div id="canvas-section" class="page-section">
+          <h1 class="heading-1">Let's play some Pong while listening</h1>
+          <div class="canvas-container">
+            <canvas id="canvas" width="640" height="480"
+              >Your browser does not support canvas.</canvas
+            >
+          </div>
+        </div>
       </main>
-      <!-- <div class="parallax-wrapper">
-        <div class="section1">
-          <div class="text">NIKLAS</div>
-        </div>
-        <div class="section2">
-          <div class="text">NORMAL</div>
-        </div>
-      </div> -->
     </div>
     <script src="script.js"></script>
   </body>

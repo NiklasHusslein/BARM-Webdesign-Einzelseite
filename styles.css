@@ -7,14 +7,12 @@ body {
   margin: 0;
   padding: 0;
   padding-top: 74px;
-  /* width: 100%; */
   height: calc(100% - 74px);
   background-color: #f3f3f3;
 }
 
 h1,
 h2,
-h3,
 a,
 p,
 button {
@@ -23,8 +21,11 @@ button {
 
 h1 {
   font-size: 3rem;
-  /* margin-left: 5rem; */
   margin-top: 0;
+}
+
+.heading-1 {
+  margin-left: 5rem;
 }
 
 .wrapper {
@@ -49,85 +50,106 @@ nav {
   gap: 3rem;
 }
 
-nav a {
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+nav ul a {
   text-decoration: none;
   color: black;
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
-.logo {
-  width: 5rem;
-}
-
-/* main {
-  padding-inline: 10px;
-} */
-
-section {
-  height: calc(100vh - 74px);
-}
-
-#home {
+#home-section {
   position: relative;
+  height: 100vh;
 }
 
 #home-studio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  height: 720px;
-  width: 1280px;
+  height: calc(100% - 74px);
+  width: 100%;
   background-image: url(assets/pictures/studio.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #home-studio p {
-  margin: 2rem 0 0 2rem;
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: bold;
-  color: rgb(10, 101, 10);
+  color: white;
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
+    1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191,
+    1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191,
+    1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4),
+    1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2),
+    1px 30px 60px rgba(16, 16, 16, 0.4);
+}
+
+#home-moderat-2,
+#home-paul-kalkbrenner-parts-of-life {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 8px solid white;
+  transition: 0.2s linear;
 }
 
 #home-moderat-2 {
-  position: absolute;
-  height: 450px;
-  width: 450px;
   background-image: url(assets/pictures/moderat_2_lp.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  right: 400px;
-  bottom: 20px;
-}
-
-#home-moderat-2 p {
-  margin: 2rem 0 0 2rem;
-  font-size: 3rem;
-  font-weight: bold;
-  color: #ffd401;
+  top: 75px;
+  left: 150px;
 }
 
 #home-paul-kalkbrenner-parts-of-life {
-  position: absolute;
-  height: 450px;
-  width: 450px;
   background-image: url(assets/pictures/paul_kalkbrenner_parts_of_life_lp.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  right: 0;
-  bottom: 300px;
+  right: 150px;
+  bottom: calc(75px + 74px);
+}
+
+#home-moderat-2 p,
+#home-paul-kalkbrenner-parts-of-life p {
+  display: none;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  /* transition: 0.2s linear; */
+}
+
+#home-moderat-2 p {
+  color: #ffd401;
 }
 
 #home-paul-kalkbrenner-parts-of-life p {
-  margin: 2rem 0 0 2rem;
-  font-size: 3rem;
-  font-weight: bold;
   color: #e12c41;
 }
 
-#bilder {
+#home-moderat-2:hover p,
+#home-paul-kalkbrenner-parts-of-life:hover p {
+  display: block;
+}
+
+/* BILDER */
+
+#bilder-section {
   overflow: hidden;
   white-space: nowrap;
   position: relative;
+  height: 70vh;
 }
 
 .picture-slide-wrapper:hover .picture-slide {
@@ -156,8 +178,9 @@ section {
 }
 
 /* VIDEOS */
-#video {
+#video-section {
   width: 100%;
+  height: 90vh;
 }
 
 .video-cards-container {
@@ -192,6 +215,22 @@ section {
   color: black;
 }
 
+.video-info h2 {
+  font-size: 2rem;
+}
+
+.video-info-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.spotify-link {
+  border-radius: 1rem;
+  height: 352px;
+  width: 100%;
+}
+
 a:visited {
   color: black;
   text-decoration: none;
@@ -201,14 +240,27 @@ a:visited {
   text-decoration: underline;
 }
 
-.video-info {
+.video-side-container {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
+.video-info h2 {
+  margin: 1rem 0;
+}
+
+.video-info p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
 /* AUDIO */
+#audio-section {
+  height: 60vh;
+}
+
 .audio-header {
   display: flex;
   justify-content: space-between;
@@ -241,11 +293,6 @@ a:visited {
   transition: box-shadow 0.3s, transform 0.3s;
 }
 
-#play-stop-button:hover {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
-  transform: scale(1.05);
-}
-
 .audio-cards-container {
   display: flex;
   gap: 2rem;
@@ -253,7 +300,6 @@ a:visited {
 
 .drums-card {
   display: flex;
-  /* align-items: center; */
   height: 300px;
   padding: 1rem;
   gap: 1rem;
@@ -262,17 +308,18 @@ a:visited {
   transition: box-shadow 0.3s, transform 0.3s;
 }
 
-#linndrum {
-  background-image: url(assets/pictures/linndrum.png);
-  height: 250px;
-  width: 250px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+#linndrum,
+#minimoog,
+#jupiter-8 {
+  object-fit: contain;
+  object-position: center;
   align-self: center;
 }
 
-.drums-card:hover {
+#play-stop-button:hover,
+.drums-card:hover,
+.bass-card:hover,
+.pads-card:hover {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
   transform: scale(1.05);
 }
@@ -287,34 +334,9 @@ a:visited {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* gap: 2rem; */
 }
 
-.bass-card {
-  display: flex;
-  align-items: center;
-  height: 125px;
-  padding: 1rem;
-  gap: 1rem;
-  border-radius: 1rem;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
-  transition: box-shadow 0.3s, transform 0.3s;
-}
-
-#minimoog {
-  background-image: url(assets/pictures/minimoog.png);
-  height: 125px;
-  width: 250px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-.bass-card:hover {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
-  transform: scale(1.05);
-}
-
+.bass-card,
 .pads-card {
   display: flex;
   align-items: center;
@@ -324,20 +346,6 @@ a:visited {
   border-radius: 1rem;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
   transition: box-shadow 0.3s, transform 0.3s;
-}
-
-#jupiter-8 {
-  background-image: url(assets/pictures/jupiter_8.png);
-  height: 125px;
-  width: 250px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-.pads-card:hover {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
-  transform: scale(1.05);
 }
 
 .gif-container {
@@ -358,57 +366,20 @@ a:visited {
     transform: translateX(100vw);
   }
 }
-/* .parallax-wrapper {
+
+/* CANVAS */
+#canvas-section {
+  height: 60vh;
+}
+
+.canvas-container {
   width: 100%;
-  perspective: 1px;
-  transform-style: preserve-3d;
-  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
 }
 
-.section1,
-.section2 {
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
-  transform-style: preserve-3d;
+canvas {
+  border-radius: 1rem;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.3s, transform 0.3s;
 }
-
-.section1::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: url("assets/synth_parallax_wallpaper_main.png") top center;
-  background-size: cover;
-  transform: translateZ(-1px) scale(2.2);
-}
-
-.section1::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: url("assets/synth_parallax_wallpaper_bottom.png") top center;
-  background-size: cover;
-}
-
-.section1 .text {
-  top: 20%;
-  transform: translateZ(-0.5px) scale(1.5, 1.6) translate(-33%, 10%);
-}
-
-.section2 {
-  background: #435;
-}
-
-.text {
-  top: 30%;
-  left: 50%;
-  position: absolute;
-  font-family: "Franklin Gothic Heavy";
-  font-size: 15vw;
-  color: white;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3),
-    5px 5px 70px rgba(255, 255, 255, 0.5);
-  transform: scale(1, 1.1) translate(-50%, 10%);
-} */
